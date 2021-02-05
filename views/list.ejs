@@ -1,0 +1,425 @@
+
+
+        <!-- header close -->
+<%- include("header") -%>
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+
+            <!-- section begin -->
+
+            <% if(listTitle !== "Today"){ %>
+
+
+
+            <section id="section-hero-5" aria-label="section-hero" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
+              <div class="overlay-solid">
+                <div class="overlay-bg t80">
+
+                  <div class="container">
+                    <div class="row">
+
+
+
+
+                      <div class="row d-flex justify-content-center container">
+                        <div class="col-sm-2">
+
+                        </div>
+                        <div class="col-sm-8 todo">
+                          <h1 class="text-center"><%= listTitle %></h1><br />
+
+                          <div class="card-hover-shadow-2x mb-3 card">
+                            <div class="card-header-tab card-header">
+                              <div class="l">
+                                <h4 class="card-title">Awesome Todo list</h4>
+                                <form action="/" method="post">
+                                  <div class="add-items d-flex">
+                                    <input type="text" name="newItem" placeholder="What do you need to do today <%= listTitle %>?" class="form-control todo-list-input">
+                                    <button type="submit" name="list" class="add btn btn-primary font-weight-bold todo-list-add-btn" value=<%= listTitle %>>Add</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+              <div class="scroll-area-sm">
+              <perfect-scrollbar class="ps-show-limits">
+              <div style="position: static;" class="ps ps--active-y">
+          <div class="ps-content">
+            <ul class=" list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="todo-indicator bg-warning"></div>
+                <div class="widget-content p-0">
+                  <div class="widget-content-wrapper">
+                    <div class="widget-content-left mr-2">
+
+                    </div>
+            <div class="widget-content-left">
+              <% newListItems.forEach(function(item){%>
+              <form action="/delete" method="post">
+
+                <div class="item">
+
+                  <div class="widget-heading">
+                    <ul>
+                      <li>
+                        <span><%= item.name %></span><br /><br />
+                        <span class="dates"><%= item.date %></span>
+
+                         <hr />
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <input type="hidden" onChange="this.form.submit()" name="listName" value="<%=listTitle%>"></input>
+              </form>
+              <%})%>
+
+
+
+              </div>
+
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </perfect-scrollbar>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="spacer-double"></div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+
+        <% } else{ %>
+          <section id="section-hero-5" aria-label="section-hero" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
+              <div class="overlay-solid">
+                  <div class="overlay-bg t80">
+                      <div class="center-y fadeScroll relative" data-scroll-speed="4">
+                          <div class="container">
+                            <div class="row">
+                              <div class=" de_testi_pix col-lg-4 col-md-4" >
+                            <a href="/victor"> <img src="images/victor1.jpg" class="img-circle" alt="" style="display:none"/></a>
+
+                              </div>
+                              <div class=" de_testi_pix col-lg-4 col-md-4" >
+                            <a href="/victor"> <img src="images/victor1.jpg" class="img-circle" alt="" /></a>
+
+                              </div>
+                              <div class=" de_testi_pix col-lg-4 col-md-4" >
+                            <a href="/victor"> <img src="images/victor1.jpg" class="img-circle" alt="" style="display:none"/></a>
+
+                              </div>
+                              </div>
+                             <br / ><br />
+
+
+                              <div class="row">
+
+                                  <div class="col-lg-4 col-md-4 de_testi_pix">
+                                <a href="/kelechi"> <img src="images/kc1.jpg" class="img-circle" alt="" /></a>
+
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 de_testi_pix">
+                                <a  href="/prince"> <img src="images/prince1.jpg" class="img-circle" alt="" /></a>
+
+                                  </div>
+                                  <div class="col-lg-4 col-md-4 de_testi_pix">
+                                <a  href="/Austin"> <img src="images/uche1.jpg" class="img-circle" alt="" /></a>
+
+                                  </div>
+
+
+
+
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-4 col-md-4 de_testi_pix">
+  <a href="/uche"> <img src="images/uche1.jpg" class="img-circle" alt="" /></a>
+
+    </div>
+    <div class="col-lg-4 col-md-4 de_testi_pix">
+  <a href="/ellis"> <img src="images/ellis1.jpg" class="img-circle" alt="" /></a>
+
+    </div>
+    <div class="col-lg-4 col-md-4 de_testi_pix">
+  <a  href="/miriam"> <img src="images/mimi2b11.jpg" class="img-circle" alt="" /></a>
+
+    </div>
+
+<br />
+
+
+</div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        <% } %>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-fun-facts" class="pt60 pb60 text-light" data-bgcolor="#202020">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                            <div class="de_count">
+                                <h3 class="timer" data-to="8" data-speed="2500">0</h3>
+                                <span>Hours of Works</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
+                            <div class="de_count">
+                                <h3 class="timer" data-to="1" data-speed="2500">0</h3>
+                                <span>Projects Done</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
+                            <div class="de_count">
+                                <h3 class="timer" data-to="100000" data-speed="2500">0</h3>
+                                <span>Satisfied Customers</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
+                            <div class="de_count">
+                                <h3 class="timer" data-to="7500" data-speed="2500">0</h3>
+                                <span>Awards Winning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-about" class="text-light" data-bgcolor="#252525">
+                <div class="container relative">
+                    <div class="row">
+
+
+                        <div class="spacer-double"></div>
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5>Design</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="80%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5>Classroom Tab</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="60%">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5>Marketing Tab</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="50%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5>Social Tab</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="20%">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5>Home Tab</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="50%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5>Alumini Tab</h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="60%">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class ="col-md-4">
+                          <div class="skill-bar style-2">
+                              <h5>Jobs Tab</h5>
+                              <div class="de-progress">
+                                  <div class="value"></div>
+                                  <div class="progress-bar" data-value="70%">
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+
+
+            <!-- section begin -->
+            <section id="section-testimonial" class="text-light" data-bgcolor="#252525">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h5><span class="id-color">Testimonials</span></h5>
+                            <h2>What They Says</h2>
+                        </div>
+
+
+                        <div id="testimonial-carousel" class="de_carousel sequence" data-wow-delay=".3s">
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/victor1.jpg" class="img-circle" alt="">
+                                            <span>Mr Victor (Boss)</span>
+                                        </div>
+                                        <p>" My dreams have come true, having a skyscraper in an island"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/kc1.jpg" class="img-circle" alt="">
+                                            <span>Mr kelechi</span>
+                                        </div>
+                                        <p>"Sparks had made me to understood ios and android development more. Now I am a professional UI/UX designer."</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/prince1.jpg" class="img-circle" alt="">
+                                            <span>Mr prince</span>
+                                        </div>
+                                        <p>"The exposure is quite commendable. I have learnt enough and I 'm still learning"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/uche1.jpg" class="img-circle" alt="">
+                                            <span>Mr Uche</span>
+                                        </div>
+                                        <p>"consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/ellis1.jpg" class="img-circle" alt="">
+                                            <span>Mr Ellis</span>
+                                        </div>
+                                        <p>"Sparks has made me to understand the general view in programming language especially javascript"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/mimi2b11.jpg" class="img-circle" alt="">
+                                            <span>miriam</span>
+                                        </div>
+                                        <p>" when I was in secondary school, my classmates call me <strong>SPARKLE</strong>.
+                                        Today I am really sparking in sparks"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item sq-item wow">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <div class="de_testi_by">
+                                            <img src="images/uche1.jpg" class="img-circle" alt="">
+                                            <span>Mr Austin</span>
+                                        </div>
+
+
+                                      <p>"Sparks has made me to be realy a senior developer. <strong>I am doing well </strong>"</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+
+        </div>
+
+
+        <!-- content close -->
+
+<%- include("footer") -%>
+        <!-- footer begin -->
